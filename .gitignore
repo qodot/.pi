@@ -1,0 +1,17 @@
+# 인증 정보 (민감!)
+agent/auth.json
+
+# 세션 로그
+agent/sessions/
+
+# 플랫폼별 바이너리
+agent/bin/
+
+# 크래시 로그
+agent/pi-crash.log
+
+# npm 의존성
+**/node_modules/
+
+# pi 기본 스킬 (별도 git repo, pi가 관리)
+agent/skills/pi-skills/
