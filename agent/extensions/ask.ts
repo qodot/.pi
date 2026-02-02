@@ -51,18 +51,18 @@ export default function (pi: ExtensionAPI) {
 
       let answer: string;
 
-      // "직접 입력" 선택 시 텍스트 입력 받기
+      // "직접 입력" 선택 시 멀티라인 에디터로 텍스트 입력 받기
       if (selected === CUSTOM_INPUT_LABEL) {
-        const customInput = await ctx.ui.input(`${question} (직접 입력):`, "");
+        const customInputValue = await ctx.ui.editor(`${question} (직접 입력)`, "");
         
-        if (customInput === undefined || customInput.trim() === "") {
+        if (customInputValue === undefined || customInputValue.trim() === "") {
           return {
             content: [{ type: "text", text: "사용자가 취소했거나 빈 값을 입력했습니다." }],
             details: { cancelled: true, answer: null },
           };
         }
         
-        answer = customInput.trim();
+        answer = customInputValue.trim();
       } else {
         answer = selected;
       }
@@ -128,16 +128,16 @@ questions: [
         let wasCustomInput = false;
 
         if (selected === CUSTOM_INPUT_LABEL) {
-          const customInput = await ctx.ui.input(`${q.question} (직접 입력):`, "");
+          const customInputValue = await ctx.ui.editor(`${q.question} (직접 입력)`, "");
           
-          if (customInput === undefined || customInput.trim() === "") {
+          if (customInputValue === undefined || customInputValue.trim() === "") {
             return {
               content: [{ type: "text", text: `'${q.question}' 질문에서 사용자가 취소했습니다.` }],
               details: { cancelled: true, answers, completedQuestions: results },
             };
           }
           
-          answer = customInput.trim();
+          answer = customInputValue.trim();
           wasCustomInput = true;
         } else {
           answer = selected;
