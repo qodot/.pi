@@ -13,6 +13,9 @@ agent/bin/
 # 크래시 로그
 agent/pi-crash.log
 
+# 크레덴셜
+**/.env
+
 # npm 의존성
 **/node_modules/
 
