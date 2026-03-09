@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.56.2",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.4",
+  "lastChangelogVersion": "0.57.1",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-opus-4-6",
   "editorPaddingX": 1,
   "hideThinkingBlock": false,
   "defaultThinkingLevel": "xhigh",
@@ -9,7 +9,5 @@
   "collapseChangelog": false,
   "steeringMode": "one-at-a-time",
   "followUpMode": "all",
-  "packages": [
-    "npm:pi-interactive-shell"
-  ]
+  "packages": []
 }
