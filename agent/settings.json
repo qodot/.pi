@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.60.0",
+  "lastChangelogVersion": "0.74.0",
   "defaultProvider": "anthropic",
-  "defaultModel": "claude-opus-4-6",
+  "defaultModel": "claude-opus-4-7",
   "editorPaddingX": 1,
   "hideThinkingBlock": false,
   "defaultThinkingLevel": "xhigh",
@@ -9,5 +9,10 @@
   "collapseChangelog": false,
   "steeringMode": "one-at-a-time",
   "followUpMode": "all",
-  "packages": []
+  "packages": [
+    "git:github.com/earendil-works/pi-review",
+    "git:github.com/picassio/pi-cc-patch",
+    "git:github.com/dannote/pi-elixir",
+    "https://github.com/earendil-works/pi-chat"
+  ]
 }
